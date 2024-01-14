@@ -71,16 +71,16 @@ elements.time_reverse = {
     canPlace: false,
 }
 
-elements.steam_train = {
+elements.heavy = {
     color: "#DFDFDF",
     behavior: [
         "XX|CR:smoke|XX",
         "BO AND M1|XX|CR:smoke",
         "XX|CR:smoke|XX",
     ],
-    category: "gases",
-    density: 99999,
-    state: "gas",
+    category: "solids",
+    density: 99999999999999999999999999999999,
+    state: "solid",
 }
 
 elements.polish = {
@@ -126,7 +126,7 @@ elements.food = {
     color: ["#359100","#74b332","#b9d461","#dede7a"],
     tick: function(pixel) { 
         // Choose randomly from eLists.SEEDS
-        changePixel(pixel,eLists.FOOD[Math.floor(Math.random()*eLists.FOOD.length)]);
+        changePixel(pixel,eLists.FOOD[Math.floor(Math.cold()*eLists.FOOD.length)]);
     },
     category: "food"
 }
